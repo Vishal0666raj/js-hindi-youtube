@@ -11,9 +11,9 @@
 //on comapring bw diff datatypes it will change into same and compare
 
 
-// console.log(null > 0);
+// console.log(null > 0);  --- null -> NAn
 // console.log(null == 0);
-// console.log(null >= 0);
+// console.log(null >= 0); ---null -> 0
 // here the equality and comaprison operator works differently 
 
 
