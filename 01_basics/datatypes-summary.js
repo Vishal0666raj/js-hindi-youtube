@@ -1,4 +1,6 @@
-// Primitve 
+// Primitve   ---  primitives are copied by value.
+
+
 
 // 7 types : string , Number , Boolean , null , undefined , symbol , Bigint 
 
@@ -15,7 +17,7 @@ const anotherId = Symbol("123");
 
 const bigNumber = 38478734864864876476n;
 
-//Reference (non - primtive)
+//Reference (non - primtive)  ----They are stored as references in memory.
 
 // Array , Object and Functions
 
