@@ -33,3 +33,29 @@ const myFunction = function(){
 }
 
 console.log(typeof id);
+
+
+//+++++++++++++++++++++++++++++++++++++++
+
+//stack(primtive) and heap(non-primitve)
+let myYoutubeName = "Vishal raj";
+let anotherName = myYoutubeName;
+anotherName = "V2raj";
+
+console.log(myYoutubeName);
+console.log(anotherName);
+
+let userOne ={
+    name:"Loura",
+    dusra_name:"lasan"
+}
+
+let userTwo = userOne;
+
+userTwo.dusra_name = "Lasan sharma.";
+
+console.log(userOne.dusra_name);
+console.log(userTwo.dusra_name);
+
+
+
