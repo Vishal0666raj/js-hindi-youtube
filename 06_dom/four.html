@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur Code | DOM</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="Main-Content">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(language){
+        const lang = document.createElement('li');
+        lang.innerHTML = `${language}`;
+        document.querySelector('.Main-Content').appendChild(lang)
+    }
+
+    addLanguage("python");
+
+
+    function addOptiLanguage(language){
+        const lang = document.createElement('li');
+        lang.appendChild(document.createTextNode("language"));
+        document.querySelector('.Main-Content').appendChild(lang)
+    }
+
+    addLanguage("C++");
+
+
+    // edit
+    const secondlanguage = document.querySelector('li:nth-child(2)');
+    const li = document.createElement('li');
+    li.innerText = "MongoDb";
+    secondlanguage.replaceWith(li);
+
+    // EDIT
+    const firstLanguage = document.querySelector('li:first-child');
+    firstLanguage.outerHTML = "<li>typeScript</li>"
+
+    //remove 
+    const lastlanguage = document.querySelector('li:last-child');
+    lastlanguage.remove();
+</script>
+</html>
