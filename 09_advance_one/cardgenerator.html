@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121;">
+    
+</body>
+    <script>
+        let data;
+        const requestUrl = 'https://api.github.com/users/hiteshchoudhary';
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET',requestUrl);
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);
+        
+        if(xhr.readyState===4){
+            const response = JSON.parse(this.responseText);
+            console.log(response);
+            console.log(typeof response);
+            console.log(response.followers)
+            const card = document.createElement("h2");
+            card.innerHTML = `Followers: ${response.followers}`
+            document.body.appendChild(card)
+            card.style.color = "#fff"
+        }
+    }
+    xhr.send()
+
+    
+    </script>
+</html>
