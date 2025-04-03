@@ -4,9 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+        }
+        .container{
+           
+            /* margin: 0 auto; */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        .box img{
+            height: 300px;
+            width: 300px;
+            border-radius: 1.5rem;
+        }
+
+        .content h2{
+            color: #fff;
+        }
+
+    </style>
 </head>
 <body style="background-color: #212121;">
-    
+    <div class="container">
+        <div class="box">
+        
+        </div>
+        <div class="content">
+
+        </div>
+    </div>
 </body>
     <script>
         let data;
@@ -21,10 +63,13 @@
             console.log(response);
             console.log(typeof response);
             console.log(response.followers)
-            const card = document.createElement("h2");
-            card.innerHTML = `Followers: ${response.followers}`
-            document.body.appendChild(card)
-            card.style.color = "#fff"
+            const card = document.getElementsByClassName("content")[0];
+            card.innerHTML = `<h2>Followers: ${response.followers}</h2>`;
+           
+            const cardImg = document.getElementsByClassName("box")[0];
+            cardImg.innerHTML = `<img src="${response.avatar_url}">`
+         
+
         }
     }
     xhr.send()
